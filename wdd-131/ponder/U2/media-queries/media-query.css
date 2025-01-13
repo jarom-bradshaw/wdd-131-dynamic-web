@@ -1,0 +1,33 @@
+body {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+header, main, footer{
+    max-width: 640px;
+    margin: 1 rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff;
+    /* box-shadow? nah */
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem; /* Got this one from the answers*/
+}
+
+section{
+padding: 1rem;
+background-color: #fff
+}
+
+
+/* Sources Used:
+https://stackoverflow.com/questions/12415661/using-marginauto-to-vertically-align-div
+*/
