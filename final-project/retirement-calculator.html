@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/fina-hub-logo-1.png" alt="Logo Image">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="budgeting-tips.html">Budgeting Tips</a>
+            <a href="investing-101.html">Investing 101</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <h1>Retirement Income Calculator</h1>
+            <p>Use this calculator to estimate how much income you'll have in retirement based on regular savings.</p>
+
+            <div class="calculator">
+                <div class="form-group">
+                    <label for="initialInvestment">Initial Investment ($):</label>
+                    <input type="number" id="initialInvestment" placeholder="e.g., 5000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="monthlyContribution">Monthly Contribution ($):</label>
+                    <input type="number" id="monthlyContribution" placeholder="e.g., 500" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="annualRate">Annual Interest Rate (%):</label>
+                    <input type="number" id="annualRate" placeholder="e.g., 7" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearsToSave">Years to Save:</label>
+                    <input type="number" id="yearsToSave" placeholder="e.g., 30" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="retirementYears">Years in Retirement:</label>
+                    <input type="number" id="retirementYears" placeholder="e.g., 30" required>
+                </div>
+
+                <div class="form-submit">
+                    <button onclick="calculateRetirement()">Calculate Retirement Income</button>
+                </div>
+
+                <h3>Estimated Retirement Income:</h3>
+                <p class="retirementIncome" id="monthlyIncome">Your retirement income will be calculated here.</p>
+                <p class="retirementIncome" id="annualIncome">Your annual income will be calculated here.</p>
+                <p class="retirementIncome" id="totalSavings">Your total savings at retirement will be calculated here.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-column"><a href="#">Product</a></div>
+            <div class="footer-column"><a href="#">Resources</a></div>
+            <div class="footer-column"><a href="#">Company</a></div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-column"><a href="#">Financial Calculator</a></div>
+            <div class="footer-column"><a href="#">Blog</a></div>
+            <div class="footer-column"><a href="#">About</a></div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-column"><a href="#">More Tools</a></div>
+            <div class="footer-column"><a href="../index.html">Personal Portfolio</a></div>
+            <div class="footer-column"><a href=""></a></div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-left">© 2024 FinaHub<a href="site-plan.html">Site Plan</a></div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="#"><img src="images/facebook-logo-white.png" alt="facebook-img"></a>
+                    <a href="https://www.linkedin.com/in/jarom-bradshaw/"><img src="images/ln-white-img.png"
+                            alt="linkedIn-img"></a>
+                    <a href="#"><img src="images/yt-icon-white-img.png" alt="youtube-img"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
