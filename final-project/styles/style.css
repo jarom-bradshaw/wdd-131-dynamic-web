@@ -218,6 +218,15 @@ p {
     display: flex;
     flex-direction: row;
     background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-color);
+}
+
+.footer-bottom .footer-left {
+    align-items: flex-start;
+}
+
+.footer-bottom .footer-right {
+    align-items: flex-end;
 }
 
 .footer-row {
@@ -524,6 +533,10 @@ img.content-image {
         flex-direction: row;
         flex-wrap: wrap;
         color: white;
+    }
+
+    .footer-bottom .footer-right {
+        align-items: flex-start;
     }
 
     .social-links {
