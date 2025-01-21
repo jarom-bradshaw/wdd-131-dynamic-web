@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinaHub Home</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -18,29 +19,97 @@
         </nav>
     </header>
     <main>
-        <div class="content-container">
-            <h1>Welcome to FinaHub</h1>
-            <p>Your go-to resource for financial planning and advice.</p>
+        <h1>Welcome to FinaHub</h1>
+        <p>Your go-to resource for financial planning and advice.</p>
+        <button class="cta-button">Learn More</button>
         </div>
+        <div class="features">
+            <div class="feature">
+                <!-- <img src="images/feature1.jpg" alt="Feature 1"> -->
+                <h3><a href="budgeting-tips.html">Budgeting Tips</a></h3>
+                <p>Learn how to manage your finances effectively with our expert budgeting tips.</p>
+            </div>
+            <div class="feature">
+                <!-- <img src="images/feature2.jpg" alt="Feature 2"> -->
+                <h3><a href="investing-101.html">Investing 101</a></h3>
+                <p>Get started with investing and grow your wealth with our beginner-friendly guides.</p>
+            </div>
+            <div class="feature">
+                <!-- <img src="images/feature3.jpg" alt="Feature 3"> -->
+                <h3><a href="#">Retirement Planning</a></h3>
+                <p>Plan for a secure future with our comprehensive retirement planning tools.</p>
+            </div>
+        </div>
+            <div class="quote-section">
+                <!-- <img src="images/fina-hub-logo-1.png" alt="Logo Image" class="quote-logo"> This looks really bad so I am changing it from the wireframe. -->
+                <div class="quote-container">
+                    <button class="nav-button left-button">&lt;</button>
+                    <div class="quote-content">
+                        <div class="quote active">
+                            <p class="quote-text">"The best time to plant a tree was 20 years ago. The second best time
+                                is
+                                now."</p>
+                            <p class="quote-author"><strong>- Chinese Proverb</strong></p>
+                        </div>
+                        <div class="quote">
+                            <p class="quote-text">"An investment in knowledge pays the best interest."</p>
+                            <p class="quote-author"><strong>- Benjamin Franklin</strong></p>
+                        </div>
+                        <div class="quote">
+                            <p class="quote-text">"The stock market is filled with individuals who know the price of
+                                everything, but the value of nothing."</p>
+                            <p class="quote-author"><strong>- Philip Fisher</strong></p>
+                        </div>
+                        <div class="quote">
+                            <p class="quote-text">"Do not save what is left after spending, but spend what is left after
+                                saving."</p>
+                            <p class="quote-author"><strong>- Warren Buffett</strong></p>
+                        </div>
+                        <div class="quote">
+                            <p class="quote-text">"Wealth consists not in having great possessions, but in having few
+                                wants."</p>
+                            <p class="quote-author"><strong>- Epictetus</strong></p>
+                        </div>
+                    </div>
+                    <button class="nav-button right-button">&gt;</button>
+                </div>
+            </div>
     </main>
     <footer>
-        <div class="footer-row">
-            <div class="footer-column"><a href="#">Product</a></div>
-            <div class="footer-column"><a href="#">Resources</a></div>
-            <div class="footer-column"><a href="#">Company</a></div>
+        <div class="footer-left">
+            <div class="footer-row">
+                <div class="footer-column"><a href="#">Product</a></div>
+                <div class="footer-column"><a href="#">Resources</a></div>
+                <div class="footer-column"><a href="#">Company</a></div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-column"><a href="#">Financial Calculator</a></div>
+                <div class="footer-column"><a href="#">Blog</a></div>
+                <div class="footer-column"><a href="#">About</a></div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-column"><a href="#">More Tools</a></div>
+                <div class="footer-column"><a href="../index.html">Personal Portfolio</a></div>
+                <div class="footer-column"><a href="#">Contact Us</a></div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-left">© 2024 FinaHub<a href="site-plan.html">Site Plan</a></div>
+                <!-- <div class="footer-right">
+                    <div class="social-links">
+                        <a href="#"><img src="images/facebook-logo-white.png" alt="facebook-img"></a>
+                        <a href="https://www.linkedin.com/in/jarom-bradshaw/"><img src="images/ln-white-img.png"
+                                alt="linkedIn-img"></a>
+                        <a href="#"><img src="images/yt-icon-white-img.png" alt="youtube-img"></a>
+                    </div>
+                </div> -->
+            </div>
         </div>
-        <div class="footer-row">
-            <div class="footer-column"><a href="#">Financial Calculator</a></div>
-            <div class="footer-column"><a href="#">Blog</a></div>
-            <div class="footer-column"><a href="#">About</a></div>
-        </div>
-        <div class="footer-row">
-            <div class="footer-column"><a href="#">More Tools</a></div>
-            <div class="footer-column"><a href="../index.html">Personal Portfolio</a></div>
-            <div class="footer-column"><a href=""></a></div>
-        </div>
-        <div class="footer-row">
-            <div class="footer-left">© 2024 FinaHub<a href="site-plan.html">Site Plan</a></div>
+        <div class="footer-right subscribe-column">
+            <h3>Subscribe Here</h3>
+            <form id="subscribe-form">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
             <div class="footer-right">
                 <div class="social-links">
                     <a href="#"><img src="images/facebook-logo-white.png" alt="facebook-img"></a>
