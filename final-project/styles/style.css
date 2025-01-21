@@ -18,8 +18,14 @@
     --nav-background-color: var(--secondary-color);
     --nav-hover-link-color: white;
     --nav-hover-background-color: var(--primary-color);
-
+    
     --max-width: 100%;
+}
+
+/* This section saved me so much work. */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -76,7 +82,6 @@ main img {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    /* align-content: center; */
 }
 
 h1,
@@ -127,7 +132,216 @@ ul li {
 p {
     padding: 1em;
     margin: 2em;
-    /* max-width: 600px; */
+}
+
+.quote-section {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-color);
+}
+
+.quote-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.quote-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 0;;
+}
+
+/* Helps space the buttons, but is technically not needed */
+.quote-content {
+    position: relative;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quote {
+    display: none;
+}
+
+.quote.active {
+    display: block;
+}
+
+.quote-text {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nav-button {
+    background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.nav-button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-color);
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.footer-left {
+    flex: 3;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subscribe-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#subscribe-form input[type="email"] {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+#subscribe-form button {
+    padding: 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--paragraph-color-on-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#subscribe-form button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1em;
+}
+
+
+.social-links img{
+    margin-left: 1em;
+    max-height: 1em;
+    min-height: 1em;
+}
+
+
+/* Hero section */
+.hero {
+    background-image: url('../images/hero-background.jpg'); /* Replace with your high-quality background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.hero .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+}
+
+.hero .cta-button:hover {
+    background-color: var(--accent2-color);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.feature {
+    flex: 1 1 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
 }
 
 /* CSS for calculator */
@@ -182,40 +396,6 @@ button:hover {
 }
 
 /*  */
-
-footer {
-    padding: 1em;
-    background-color: var(--secondary-color);
-    color: var(--paragraph-color-on-color);
-}
-
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 0;
-}
-
-.footer-column {
-    flex: 1;
-    padding: 0 1em;
-}
-
-.footer-left {
-    flex: 1;
-    text-align: left;
-    display: inline;
-}
-
-.footer-right {
-    flex: 1;
-    text-align: right;
-}
-
-.social-links img{
-    margin-left: 1em;
-    max-height: 1em;
-    min-height: 1em;
-}
 
 @media (min-width: 768px) {
     .content-container {
