@@ -34,6 +34,7 @@ body {
 }
 
 header {
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,6 +93,7 @@ h5,
 h6 {
     font-family: var(--heading-font);
     color: var(--headline-color-on-white);
+    font-size: 2em;
 }
 
 
@@ -115,6 +117,7 @@ hr {
     align-content: center;
     padding: 1em;
     margin: 0 auto;
+    box-sizing: border-box;
 
 }
 
@@ -133,6 +136,7 @@ p {
     padding: 1em;
     margin: 2em;
     text-align: center;
+    font-size: 1em;
 }
 
 .quote-section {
@@ -202,12 +206,18 @@ p {
     background-color: darken(var(--secondary-color), 10%);
 }
 
-footer {
+.footer-top {
     display: flex;
     justify-content: space-between;
     padding: 1em;
     background-color: var(--secondary-color);
     color: var(--paragraph-color-on-color);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--secondary-color);
 }
 
 .footer-row {
@@ -230,12 +240,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-right: 1.25em;
 }
 
 .subscribe-column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 90%;
 }
 
 #subscribe-form {
@@ -391,7 +403,8 @@ button:hover {
     margin-top: 20px;
 }
 
-/*  */
+/* laptop, tablet, phone */
+/* Future note: make sure to design from smallest to biggest */
 
 @media (min-width: 768px) {
     .content-container {
@@ -418,7 +431,125 @@ img.content-image {
 }
 
 @media (min-width: 768px) {
+    .content-container {
+        max-width: 90%;
+    }
     img.content-image {
         width: 50%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    img {
+        max-width: 100%;
+        min-width: 95%;
+    }
+
+    header {
+        /* display: flex; */
+        display: block;
+        padding: 10px;
+    }
+
+    header img {
+        max-width: 40px;
+        min-width: 40px;
+        box-shadow: 0 0 8px 8px white inset; /* does not seem to be working */
+        /* background-blend-mode: lighten;
+        filter: blur(px); */
+    }
+
+    .header-img-container {
+        background-color: white;
+        min-width: 100%;
+    }
+
+    header nav a {
+        padding: .75em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    p {
+        margin: .1em;
+        padding: .4em;
+    }
+
+    /* h1 + p {
+            margin-bottom: px;
+
+        } */
+
+    nav, nav img {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .features {
+        padding: 0px;
+    }
+
+    .footer-top {
+        min-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-column {
+        padding: .5em;
+    }
+
+    .footer-left {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 2em;
+        margin-right: 1em;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: white;
+    }
+
+    .social-links {
+        margin-top: 1em;
+        display: flex;
+        /* flex-wrap: ; */
+    }
+
+    .social-links img {
+        /* margin-left: ; */
+        max-width: 1px;
+    }
+    
+    .quote-section {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .quote-container {
+        padding: 0%;
+        border-radius: 0%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .quote-content {
+        padding: 0%;
     }
 }
