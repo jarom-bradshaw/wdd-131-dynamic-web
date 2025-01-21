@@ -22,6 +22,7 @@
     --max-width: 100%;
 }
 
+
 /* This section saved me so much work. */
 a {
     text-decoration: none;
@@ -132,6 +133,7 @@ ul li {
 p {
     padding: 1em;
     margin: 2em;
+    text-align: center;
 }
 
 .quote-section {
@@ -305,7 +307,7 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    align-content: center;
+    /* align-items: ; */
     justify-content: center;
 }
 
@@ -329,11 +331,6 @@ footer {
     text-align: center;
 }
 
-.feature img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
 
 .feature h3 {
     font-size: 1.5em;
