@@ -47,6 +47,10 @@ function calculateRetirement() {
     const annualRate = parseFloat(document.getElementById('annualRate').value) / 100;
     const yearsToSave = parseInt(document.getElementById('yearsToSave').value);
     const retirementYears = parseInt(document.getElementById('retirementYears').value);
+    const monthsToSave = yearsToSave * 12;
+    let presentValue = initialInvestment;
+    const monthlyRate = annualRate / 12;
+    let futureValue = initialInvestment
 
     if (isNaN(initialInvestment) || isNaN(monthlyContribution) || isNaN(annualRate) || 
     isNaN(yearsToSave) || isNaN(retirementYears)) {
@@ -54,12 +58,22 @@ function calculateRetirement() {
         return;
     }
 
-    const futureValueInitialInvestment = initialInvestment * Math.pow(1 + annualRate, yearsToSave);
-    const futureValueMonthlyContributions = monthlyContribution * (((Math.pow(1 + annualRate,
-        yearsToSave) - 1) / annualRate) * (1 + annualRate));
-    const totalSavingsAtRetirement = futureValueInitialInvestment + futureValueMonthlyContributions;
-    const annualIncome = totalSavingsAtRetirement * 0.04; // The 4% rule from the trinity study is why it is 0.04
+    for (let index = 0; index <= monthsToSave; index++) {
+        futureValue += monthlyContribution;
+        futureValue *= (1 + monthlyRate);
+    }
+
+    const totalSavingsAtRetirement = futureValue;
+    const annualIncome = totalSavingsAtRetirement * 0.04;
     const monthlyIncome = annualIncome / 12;
+    
+    // I could not find a equation to do the math correctly so I made a for loop. 
+    // const futureValueInitialInvestment = initialInvestment * Math.pow(1 + annualRate, yearsToSave);
+    // const futureValueMonthlyContributions = monthlyContribution * (((Math.pow(1 + annualRate,
+    //     yearsToSave) - 1) / annualRate) * (1 + annualRate));
+    // const totalSavingsAtRetirement = futureValueInitialInvestment + futureValueMonthlyContributions;
+    // const annualIncome = totalSavingsAtRetirement * 0.04; // The 4% rule from the trinity study is why it is 0.04
+    // const monthlyIncome = annualIncome / 12;
 
     // Display the results
     document.getElementById('monthlyIncome').innerText = `Estimated Monthly Retirement Income: 
