@@ -62,6 +62,9 @@ function calculateRetirement() {
         futureValue += monthlyContribution;
         futureValue *= (1 + monthlyRate);
     }
+    // count += 1
+    // y-value = future value. use to plot graph with seaborn or matplotlib. I don't know the js libraries
+    // maybe make some other y values.
 
     const totalSavingsAtRetirement = futureValue;
     const annualIncome = totalSavingsAtRetirement * 0.04;
